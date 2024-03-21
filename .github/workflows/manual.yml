@@ -33,5 +33,5 @@ jobs:
       run: echo "Hello ${{ inputs.name }}"
 
     - name: Send another greeting
-      if: github.event.inputs.name == "bar"
+      if: github.event.inputs.name == 'bar'
       run: echo "Bar, hello ${{ inputs.name }}"
