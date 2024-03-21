@@ -29,4 +29,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
+      if: inputs.name == "foo"
       run: echo "Hello ${{ inputs.name }}"
+
+    - name: Send another greeting
+      if: inputs.name == "bar"
+      run: echo "Bar, hello ${{ inputs.name }}"
